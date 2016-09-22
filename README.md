@@ -1,8 +1,8 @@
 # DITRAS
 
-DITRAS (DIary-based TRAjectory Simulator) is a framework to simulate the spatio-temporal patterns of human mobility in a realistic way. DITRAS operates in two steps: the generation of a *mobility diary* and the translation of the mobility diary into a *mobility trajectory*. The mobility diary is constructed by a Markov model which captures the tendency of individuals to follow or break their routine. The mobility trajectory is produced by a model based on the concept of preferential exploration and preferential return. DITRAS can reproduce the statistical properties of real human mobility trajectories in an accurate way.
+DITRAS (DIary-based TRAjectory Simulator) is a framework to simulate the spatio-temporal patterns of human mobility in a realistic way. DITRAS operates in two steps: the generation of a *mobility diary* and the translation of the mobility diary into a *mobility trajectory*. The mobility diary is constructed by a Markov model which captures the tendency of individuals to follow or break their routine. The mobility trajectory is produced by a model based on the concept of preferential exploration and preferential return. DITRAS can reproduce the statistical properties of real human mobility trajectories in an accurate way. For technical details on DITRAS please read the scientific article at this link: [http://arxiv.org/abs/1607.05952](http://arxiv.org/abs/1607.05952) 
 
-How to use DITRAS
+How to run DITRAS
 -----------------
 To run the code of DITRAS, download all the folder in this repository and write on the terminal a command in the following format:   
 `python DITRAS.py n_agents time_slots spatial_tessellation od_matrix diary_generator_1hour.pkl filename`, where:
@@ -17,9 +17,9 @@ For example type the following command on the terminal to start your DITRAS simu
 ~~~
 python DITRAS.py 10000 720 location2info_trentino od_matrix.pkl diary_generator_1hour.pkl trajs_10000_720.csv 
 ~~~
-DITRAS will simulate the mobility of 10,000 agents for 720 hours (1 months), using the `location2info_trentino` weighted spatial tessellation and the diary generator `diary_generator_1hour.pkl`. The produced synthetic trajectories will be stored in a file named `trajs_10000_720.csv`. DITRAS will also compute the origin destination matrix 'od_matrix.pkl` the first time you run the command. 
+DITRAS will simulate the mobility of 10,000 agents for 720 hours (1 months), using the `location2info_trentino` weighted spatial tessellation and the diary generator `diary_generator_1hour.pkl`. The produced synthetic trajectories will be stored in a file named `trajs_10000_720.csv`. DITRAS will also compute the origin destination matrix `od_matrix.pkl` the first time you run the command. 
 
-Enjoy DITRAS and let us know if something is not working!
+Enjoy DITRAS please give us your feedback!
 
 
 
