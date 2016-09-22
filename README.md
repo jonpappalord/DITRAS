@@ -20,7 +20,7 @@ Required Python packages
 - time
 - csv
 
-How to run DITRAS
+How to run DITRAS as standalone
 -----------------
 To run the code of DITRAS, download all the folder in this repository and write on the terminal a command in the following format:   
 `python DITRAS.py n_agents time_slots spatial_tessellation od_matrix diary_generator_1hour.pkl filename`, where:
