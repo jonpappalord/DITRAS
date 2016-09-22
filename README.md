@@ -2,6 +2,24 @@
 
 DITRAS (DIary-based TRAjectory Simulator) is a framework to simulate the spatio-temporal patterns of human mobility in a realistic way. DITRAS operates in two steps: the generation of a *mobility diary* and the translation of the mobility diary into a *mobility trajectory*. The mobility diary is constructed by a Markov model which captures the tendency of individuals to follow or break their routine. The mobility trajectory is produced by a model based on the concept of preferential exploration and preferential return. DITRAS can reproduce the statistical properties of real human mobility trajectories in an accurate way. For technical details on DITRAS please read the scientific article at this link: [http://arxiv.org/abs/1607.05952](http://arxiv.org/abs/1607.05952) 
 
+Citation
+---------
+If you use this code, please cite the following scientic article:
+- L. Pappalardo and F. Simini, Modelling individuals routines and spatio-temporal trajectories in human mobility, CoRR abs/1607.05952, 2016 (http://arxiv.org/abs/1607.05952)
+
+Required Python packages
+------------------------
+- random
+- cPickle
+- math
+- scipy
+- collections
+- numpy
+- sys
+- os
+- time
+- csv
+
 How to run DITRAS
 -----------------
 To run the code of DITRAS, download all the folder in this repository and write on the terminal a command in the following format:   
