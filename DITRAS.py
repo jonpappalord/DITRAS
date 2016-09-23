@@ -77,7 +77,9 @@ def compute_od_matrix(spatial_tessellation, filename='od_matrix.pkl'):
                 od_matrix[id_i, id_j] = p_ij
 
         # normalization by row
-        od_matrix[id_i] /= np.sum(od_matrix[id_i])
+        sum_odm = np.sum(od_matrix[id_i])
+        if sum_odm > 0.0:
+          od_matrix[id_i] /= sum_odm
 
         # progress bar update
         percentage = int(float(count * 100) / n)
