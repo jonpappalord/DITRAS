@@ -585,7 +585,7 @@ if __name__ == '__main__':
     #max_locs = 1000
     #spatial_tessellation = dict(load_spatial_tessellation('location2info').items()[:max_locs])
 
-    spatial_tessellation = load_spatial_tessellation('location2info')  # de-commenta per matrice su tutte le locazioni
+    spatial_tessellation = load_spatial_tessellation(args.spatial_tessellation)  # de-commenta per matrice su tutte le locazioni
     if not path.isfile(args.od_matrix):
         compute_od_matrix(spatial_tessellation, filename=args.od_matrix)
 
