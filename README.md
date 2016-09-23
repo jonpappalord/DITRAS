@@ -39,6 +39,19 @@ DITRAS will simulate the mobility of 10,000 agents for 720 hours (1 months), usi
 
 Enjoy DITRAS please give us your feedback!
 
+Output of DITRAS
+----------------
+DITRAS produces a file with the following format:
+~~~
+agent_id,location_id,time_slot
+~~~
+where:
+- **agent_id** is an identifier of the agent
+- **location_id** is the identifier of the location visited by the agent, as specified in the spatial tessellation file
+- **time_slot** is the time slot of the visit, i.e., the hour when the agent visited the location
+
+
+
 
 
 
