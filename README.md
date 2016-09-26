@@ -39,7 +39,7 @@ DITRAS will simulate the mobility of 10,000 agents for 720 hours (1 months), usi
 
 How to run DITRAS as library
 -----------------------------
-First, read the spatial tessellation from the corresponding file and load it in a dictionary, using the function `load_spatial_tessellation`. Second, initialize a DITRAS object with the parameters you prefer. Finally, start the execution of DITRAS by using the method `start_simulation`.
+First, read the spatial tessellation from the corresponding file and load it in a dictionary, using the function `load_spatial_tessellation`. In this repository we provide an example of spatial tessellation regarding the Italian region of Trentino, it is stored in the file `location2info_trentino`. Second, initialize a DITRAS object with the parameters you prefer. Finally, start the execution of DITRAS by using the method `start_simulation`.
 ~~~
 spatial_tessellation = load_spatial_tessellation('location2info_trentino')
 
