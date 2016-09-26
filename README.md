@@ -37,7 +37,19 @@ python DITRAS.py 10000 720 location2info_trentino od_matrix.pkl diary_generator_
 ~~~
 DITRAS will simulate the mobility of 10,000 agents for 720 hours (1 months), using the `location2info_trentino` weighted spatial tessellation and the diary generator `diary_generator_1hour.pkl`. The produced synthetic trajectories will be stored in a file named `trajs_10000_720.csv`. DITRAS will also compute the origin destination matrix `od_matrix.pkl` the first time you run the command. 
 
-Enjoy DITRAS please give us your feedback!
+How to run DITRAS as library
+-----------------------------
+First, read the spatial tessellation from the corresponding file and load it in a dictionary, using the function `load_spatial_tessellation`. Second, initialize a DITRAS object with the parameters you prefer. Finally, start the execution of DITRAS by using the method `start_simulation`.
+~~~
+spatial_tessellation = load_spatial_tessellation('location2info_trentino')
+
+ditras = DITRAS(n_agents=10000, length=720, diary_generator=MD(filename='diary_generator_1hour.pkl'),
+                 trajectory_generator=dEPR(rho=0.6, gamma=0.21), filename='trajs_10000_720.csv')
+
+ditras.start_simulation(spatial_tessellation, od_matrix_file='od_matrix.pkl')
+~~~
+Run the `ditras_example.ipynb` notebook in this repository to try different executions of DITRAS.
+
 
 Output of DITRAS
 ----------------
