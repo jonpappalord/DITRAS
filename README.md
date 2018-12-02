@@ -5,7 +5,8 @@ DITRAS (DIary-based TRAjectory Simulator) is a framework to simulate the spatio-
 Citation
 ---------
 If you use this code, please cite the following scientific article:
-- L. Pappalardo and F. Simini, Modelling individuals routines and spatio-temporal trajectories in human mobility, CoRR abs/1607.05952, 2016 (http://arxiv.org/abs/1607.05952)
+- L. Pappalardo and F. Simini, Data-driven generation of spatio-temporal routines in human mobility, Data Mining and Knowledge Discovery,
+Volume 32, Issue 3, pp 787–829, 2018 (https://link.springer.com/article/10.1007/s10618-017-0548-4)
 
 Required Python packages
 ------------------------
