@@ -1,5 +1,5 @@
 from random import sample, uniform, random
-import cPickle as pickle
+import pickle as pickle
 from math import sqrt, sin, cos, pi, asin, pow, ceil
 from scipy.stats import expon
 from collections import defaultdict
@@ -26,7 +26,7 @@ def timeit(method):
         result = method(*argst, **kwt)
         te = time.time()
 
-        print '\n\t\ttime: %2.2f min' % ((te-ts)/60.0)
+        print('\n\t\ttime: %2.2f min' % ((te-ts)/60.0))
         return result
 
     return timed
@@ -87,7 +87,7 @@ def compute_od_matrix(spatial_tessellation, filename='od_matrix.pkl'):
             old_p = percentage
         count += 1
 
-    print od_matrix.shape
+    print(od_matrix.shape)
     pickle.dump(od_matrix, open(filename, 'wb'))
 
     return od_matrix
@@ -157,7 +157,7 @@ def load_spatial_tessellation(filename='location2info_trentino', delimiter=','):
     """
     spatial_tessellation = {}
     f = csv.reader(open(filename), delimiter=delimiter)
-    f.next()  # delete header
+    next(f)  # delete header
     i = 0
     for line in f:
         relevance = int(line[2])
@@ -236,7 +236,7 @@ class dEPR(TrajectoryGenerator):
             the identifier of the next location
         """
         index = weighted_random_selection(self.location2visits.values())
-        next_location = self.location2visits.keys()[index]
+        next_location = list(self.location2visits)[index]
         return next_location
 
     def __preferential_exploration(self, current_location):
@@ -421,7 +421,7 @@ class MD(DiaryGenerator):
 
             ## select the next state in the Markov chain
             index = weighted_random_selection(self.markov_model[prev_state].values()) 
-            next_state = self.markov_model[prev_state].keys()[index]
+            next_state = list(self.markov_model[prev_state])[index]
             V.append(next_state)
 
             j = next_state[0]
@@ -562,13 +562,13 @@ if __name__ == '__main__':
 
     import argparse
 
-    print "----------------------------------------------"
-    print "                   DITRAS                 "
-    print "        (DIary-based TRAjectory Simulator)   "
-    print "----------------------------------------------"
-    print "Authors: ", __author__
-    print "Email:  ", __contact__
-    print "----------------------------------------------\n"
+    print ("----------------------------------------------")
+    print ("                   DITRAS                 ")
+    print( "        (DIary-based TRAjectory Simulator)   ")
+    print ("----------------------------------------------")
+    print ("Authors: ", __author__)
+    print ("Email:  ", __contact__)
+    print ("----------------------------------------------\n")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('n_agents', type=int, help='number of agents to simulate')
@@ -589,6 +589,3 @@ if __name__ == '__main__':
                  trajectory_generator=dEPR(rho=0.6, gamma=0.21), filename=args.filename)
 
     ditras.start_simulation(spatial_tessellation, od_matrix_file=args.od_matrix)
-
-
-
